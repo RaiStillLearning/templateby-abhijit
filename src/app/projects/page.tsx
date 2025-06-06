@@ -43,7 +43,7 @@ const PROJECTS = [
       "/assets/projects-screenshots/financeme/7.png",
       "/assets/projects-screenshots/financeme/8.png",
       "/assets/projects-screenshots/financeme/9.png",
-      "/assets/projects-screenshots/financeme/10.png"
+      "/assets/projects-screenshots/financeme/10.png",
     ],
   },
   {
@@ -72,7 +72,6 @@ const PROJECTS = [
       "/assets/projects-screenshots/smartparkingassitant/01.jpeg",
       "/assets/projects-screenshots/smartparkingassitant/03.jpeg",
       "/assets/projects-screenshots/smartparkingassitant/04.jpeg",
-
     ],
   },
 ];
@@ -80,7 +79,9 @@ function Page() {
   return (
     <>
       <div className="container mx-auto md:px-[50px] xl:px-[150px] text-zinc-300 h-full">
-        <h1 className="text-4xl mt-[100px] mb-[50px]">Projects</h1>
+        <h1 className="text-4xl mt-[100px] mb-[50px]">
+          Projects yang sudah kami kerjakan
+        </h1>
         <ul className="grid  md:grid-cols-2 lg:grid-cols-3 gap-10 place-content-around ">
           {PROJECTS.map((project) => (
             <li
