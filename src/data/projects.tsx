@@ -946,10 +946,10 @@ const projects: Project[] = [
   },
   {
     // 06. Savinder Puri portfolio project
-    id: "Certificates Basic Programming - Dicoding",
-    category: "Web Development",
-    title: "Certificates: Basic Programming - Dicoding",
-    src: "/assets/certificates-dicoding/4.png",
+    id: "Certificates- Dicoding",
+    category: "Bootcamp Beasiswa",
+    title: "Certificates:- Dicoding",
+    src: "/assets/certificates-dicoding/sertifikat-resmi.png",
     screenshots: ["04.png"],
     live: "",
     github: "https://github.com/RaiStillLearning",
@@ -961,10 +961,13 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            basic programming from dicoding and get the certificate
+            i Successfully completed the bootcamp dicoding x DBS foundation and
+            get the certificate
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={["/assets/certificates-dicoding/4.png"]} />
+          <SlideShow
+            images={["/assets/certificates-dicoding/sertifikat-resmi.png"]}
+          />
         </div>
       );
     },
