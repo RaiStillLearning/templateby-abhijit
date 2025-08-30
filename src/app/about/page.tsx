@@ -43,25 +43,25 @@ import { TbTerminal2 } from "react-icons/tb";
 const CONTACT_LINKS = [
   {
     name: "Email",
-    content: "abhijitzende75@gmail",
-    href: "mailto:abhijitzende75@gmail.com",
+    content: "rakhaarkhana98>gmail.com",
+    href: "mailto:rakhaarkhana98>gmail.com.com",
     icon: <FaEnvelope height={"50px"} />,
   },
   {
     name: "Phone",
     content: "1234567890",
-    href: "tel:8308509180",
+    href: "tel:085210601398",
     icon: <FaPhone height={"50px"} />,
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/zende-abhijit/",
+    href: "https://www.linkedin.com/in/rakha-arkhana-6aba03353/",
     content: "/zende-abhijit",
     icon: <FaLinkedin height={"50px"} />,
   },
   {
     name: "GitHub",
-    href: "https://github.com/Abhiz2411",
+    href: "https://github.com/RaiStillLearning",
     content: "/naresh-khatri",
     icon: <FaGithub height={"50px"} />,
   },
@@ -70,7 +70,7 @@ const CONTACT_LINKS = [
 const TOOLS = [
   {
     name: "JavaScript",
-    content: "JavaScript is a high-level, interpreted programming language",
+    content: "JavaScript, Saya cukup mahir dalam bahasa pemrograman ini.",
     icon: <SiJavascript size={"50px"} color={"#f0db4f"} />,
     color: "#f0db4f",
   },
@@ -251,7 +251,7 @@ function Page() {
                 />
               </div>
               <div className="flex flex-col gap-3 lg:items-center ml-10 md:ml-20 lg:ml-0">
-                <p className="text-center text-xl">Naresh Khatri</p>
+                <p className="text-center text-xl">Raka Arkana</p>
                 <div className="text-xs bg-zinc-700 w-fit px-3 py-1 rounded-full">
                   Web Developer
                 </div>

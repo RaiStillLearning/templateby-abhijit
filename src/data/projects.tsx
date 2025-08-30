@@ -2,7 +2,13 @@ import AceTernityLogo from "@/components/logos/aceternity";
 import SlideShow from "@/components/slide-show";
 import { Button } from "@/components/ui/button";
 import { TypographyH3, TypographyP } from "@/components/ui/typography";
-import { ArrowDownUpIcon, ArrowUpRight, ExternalLink, Link2, MoveUpRight } from "lucide-react";
+import {
+  ArrowDownUpIcon,
+  ArrowUpRight,
+  ExternalLink,
+  Link2,
+  MoveUpRight,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -34,6 +40,7 @@ import {
   SiApachemaven,
   SiCplusplus,
   SiArduino,
+  SiPostman,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import css from "styled-jsx/css";
@@ -242,55 +249,55 @@ const PROJECT_SKILLS = {
     title: "OpenAI",
     bg: "black",
     fg: "white",
-    icon: <img src="assets/icons/openai-svgrepo-com_white.svg" alt="OpenAI"/>,
+    icon: <img src="assets/icons/openai-svgrepo-com_white.svg" alt="OpenAI" />,
   },
   netlify: {
     title: "Netlify",
     bg: "black",
     fg: "white",
-    icon: <SiNetlify/>,
+    icon: <SiNetlify />,
   },
   html: {
     title: "HTML5",
     bg: "black",
     fg: "white",
-    icon: <SiHtml5/>,
+    icon: <SiHtml5 />,
   },
   css: {
     title: "CSS3",
     bg: "black",
     fg: "white",
-    icon: <SiCss3/>,
+    icon: <SiCss3 />,
   },
   bootstrap: {
     title: "Bootstrap",
     bg: "black",
     fg: "white",
-    icon: <SiBootstrap/>,
+    icon: <SiBootstrap />,
   },
   maven: {
     title: "Maven",
     bg: "black",
     fg: "white",
-    icon: <SiApachemaven/>,
+    icon: <SiApachemaven />,
   },
   java: {
     title: "Java",
     bg: "black",
     fg: "white",
-    icon: <img src="assets/icons/icons8-java.svg" alt="Java"/>,
+    icon: <img src="assets/icons/icons8-java.svg" alt="Java" />,
   },
   cplusplus: {
     title: "C++",
     bg: "black",
     fg: "white",
-    icon: <SiCplusplus/>,
+    icon: <SiCplusplus />,
   },
-  arduino: {
-    title: "Arduino",
+  postman: {
+    title: "Postman",
     bg: "black",
     fg: "white",
-    icon: <SiArduino/>,
+    icon: <SiPostman />,
   },
 };
 export type Project = {
@@ -769,254 +776,173 @@ const projects: Project[] = [
   // },
 
   // +
-  { // 01. AI Docker file optimizer project
-    id: "aidockerfileoptimizer",
-    category: "AI and DevOps",
-    title: "AI Dockerfile Optimizer",
-    src: "/assets/projects-screenshots/aidockerfileoptimizer/2.png",
+  {
+    // 01. AI Docker file optimizer project
+    id: "project-dicoding",
+    category: "AI and Web Development",
+    title: "Projek Analisis Kanker",
+    src: "/assets/project-dicoding/analisis-kanker.png",
     screenshots: ["1.png", "2.png", "3.png"],
-    live: "https://ai-docker-file-optimizer.netlify.app/",
-    github:"https://github.com/Abhiz2411/AI-Docker-file-optimizer",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [PROJECT_SKILLS.openai,PROJECT_SKILLS.netlify],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            AI-Docker-file-optimizer helps optimize Dockerfiles for smaller, more efficient images. 
-            Simply paste your Dockerfile, and the app analyzes it for best practices and size 
-            optimization tips. It then provides a refactored, optimized version of the Dockerfile. 
-            Deployed on Vercel, it ensures fast and easy access to Dockerfile optimization.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/aidockerfileoptimizer/1.png`,
-              `${BASE_PATH}/aidockerfileoptimizer/2.png`,
-              `${BASE_PATH}/aidockerfileoptimizer/3.png`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  { // 02. FinanceMe project
-    id: "financeme",
-    category: "DevOps in Banking and Finance",
-    title: "FinanceMe: Complete DevOps Capstone Project",
-    src: "/assets/projects-screenshots/financeme/1.png",
-    screenshots: ["/assets/projects-screenshots/financeme/1.png"],
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.html,
-        PROJECT_SKILLS.css,
-        PROJECT_SKILLS.js,
-        PROJECT_SKILLS.bootstrap,
-      ],
-      backend: [
-        PROJECT_SKILLS.java,
-        PROJECT_SKILLS.maven,
-        PROJECT_SKILLS.postgres,
-      ],
-    },
-    live: "https://github.com/Abhiz2411/FinanceMe-Devops-Project-01",
-    github: "https://github.com/Abhiz2411/FinanceMe-Devops-Project-01",
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono text-2xl text-center">
-            FinanceMe: Complete DevOps Capstone Project
-          </TypographyP>
-          <TypographyP className="font-mono ">
-            This project demonstrates the deployment of a DevOps pipeline for a global banking and
-            financial services provider, FinanceMe. The company transitioned from a monolithic 
-            architecture to a microservice-based architecture to handle increased traffic and 
-            scaling challenges. The project involves automating infrastructure provisioning, build 
-            and deployment processes, and continuous monitoring using modern DevOps tools and 
-            AWS services.?
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Architecture </TypographyH3>
-          <p className="font-mono mb-2">
-            The project is divided into three main phases:
-            1.Automating Infrastructure Provisioning
-            2.Build and Deployment Automation
-            3.Continuous Monitoring
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/1.png`,
-              `${BASE_PATH}/financeme/2.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Automating Infrastructure Provisioning</TypographyH3>
-          <p className="font-mono mb-2">
-          Terraform is used to create 4 AWS EC2 instances:
-            Jenkins Master Node (for CI/CD pipeline management)
-            Build Server (for application and Docker image builds)
-            Production Server (for deploying Dockerized applications)
-            Monitoring Server (for continuous monitoring of Build and Prod servers)
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/4_A.png`,
-              `${BASE_PATH}/financeme/4.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Build and Deployment Automation</TypographyH3>
-
-          <p className="font-mono mb-2">
-          Jenkins is configured for a CI/CD pipeline:
-            Jenkins Master Node is responsible for pipeline orchestration.
-            Build Server is configured as a Jenkins Slave Node to handle application builds and Docker image creation.
-            Ansible is used for automating deployment to the Prod server, where the application is deployed using an Ansible client-server model.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/5.png`,
-              `${BASE_PATH}/financeme/6.png`,
-              `${BASE_PATH}/financeme/7.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Continuous Monitoring </TypographyH3>
-          <p className="font-mono mb-2">
-          Prometheus and Grafana are used for real-time monitoring:
-            Node Exporter is installed on both Build and Prod servers to collect server metrics (CPU, Disk Space, Memory Utilization).
-            Grafana Dashboard is created to visualize these metrics for continuous monitoring.
-          </p>
-          <SlideShow images={[
-                `${BASE_PATH}/financeme/3.png`,
-                `${BASE_PATH}/financeme/8.png`,
-                `${BASE_PATH}/financeme/9.png`,
-                `${BASE_PATH}/financeme/10.png`,
-            ]} />
-        </div>
-      );
-    },
-  },
-  { // 03. Portfolio project
-    id: "portfolio",
-    category: "Portfolio",
-    title: "My Portfolio",
-    src: "/assets/projects-screenshots/myportfolio/landing.png",
-    screenshots: ["assets/projects-screenshots/myportfolio/landing.png"],
-    live: "https://www.abhijitzende.com/",
-    github:"https://github.com/Abhiz2411/3D-interactive-portfolio",
+    live: "https://projek-analisis-kanker.vercel.app/",
+    github: "https://github.com/RaiStillLearning/projek-analisis-kanker",
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
         PROJECT_SKILLS.next,
-        PROJECT_SKILLS.shadcn,
-        PROJECT_SKILLS.aceternity,
-        PROJECT_SKILLS.framerMotion,
         PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.spline,
       ],
+      backend: [PROJECT_SKILLS.python],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Kami mengerjakan proyek analisis kanker // menggunakan machine
+            learning untuk mengklasifikasikan jenis kanker berdasarkan data
+            medis. // Proyek ini melibatkan pengumpulan data, pra-pemrosesan,
+            pelatihan model, dan evaluasi hasil. // Kami menggunakan algoritma
+            seperti Decision Tree, Random Forest, dan Support Vector Machine
+            untuk mencapai akurasi yang tinggi dalam klasifikasi kanker. //
+            Hasil dari proyek ini diharapkan dapat membantu dalam diagnosis dini
+            dan pengobatan yang lebih efektif bagi pasien kanker.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              `/assets/project-dicoding/1.png`,
+              `/assets/project-dicoding/2.png`,
+              `/assets/project-dicoding/3.png`,
+            ]}
+          />
+        </div>
+      );
+    },
+  },
+  {
+    // 02. FinanceMe project
+    id: "Certificates-dicoding",
+    category: "Certificates Dicoding Backend",
+    title:
+      "saya mempelajari backend dari dicoding dan mendapatkan sertifikat. ",
+    src: "/assets/certificates-dicoding/1.png",
+    screenshots: ["/assets/certificates-dicoding/1.png"],
+    skills: {
+      frontend: [],
+      backend: [PROJECT_SKILLS.express],
+    },
+    live: "",
+    github: "https://github.com/RaiStillLearning",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            Certificates: Dicoding Backend Development
+          </TypographyP>
+          <TypographyP className="font-mono ">
+            I have completed backend development courses from Dicoding and
+            earned certificates. These courses covered various aspects of
+            backend development, including server-side programming, database
+            management, and API design. The knowledge and skills gained from
+            these courses have equipped me to build robust and scalable backend
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Architecture </TypographyH3>
+          <SlideShow images={["/assets/certificates-dicoding/1.png"]} />
+        </div>
+      );
+    },
+  },
+  {
+    // 03. Portfolio project
+    id: "Certificates-Udemy-frontend",
+    category: "Certificates",
+    title: "Certificates: Udemy Frontend Development",
+    src: "/assets/certificates-dicoding/5.png",
+    screenshots: ["/assets/certificates-dicoding/5.png"],
+    live: "",
+    github: "https://github.com/RaiStillLearning",
+    skills: {
+      frontend: [PROJECT_SKILLS.js],
       backend: [],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            Welcome to my digital playground, where creativity meets code in the
-            dopest way possible.
+            Certificates javascript from udemy
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">
-            Beautiful 3D Objects{" "}
-          </TypographyH3>
           <p className="font-mono mb-2">
-            Did you see that 3D keyboard modal? Yeah! I made that. That
-            interactive keyboard is being rendered in 3D on a webpage 🤯, and
-            pressing each keycap reveals a skill in a goofy way. It&apos;s like
-            typing, but make it art.
+            i achieve the certificate after complete the course bootcamp for 7
+            days without sleep well
           </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/myportfolio/landing.png`,
-              `${BASE_PATH}/portfolio/skills.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 ">Space Theme</TypographyH3>
-          <p className="font-mono mb-2">
-            Dark background + floating particles = out-of-this-world cool.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/myportfolio/navbar.png`]} />
-          <TypographyH3 className="my-4 mt-8">Projects</TypographyH3>
-
-          <p className="font-mono mb-2">
-            My top personal and freelance projects — no filler, all killer.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/myportfolio/projects.png`,
-              `${BASE_PATH}/myportfolio/project.png`,
-            ]}
-          />
-          <p className="font-mono mb-2 mt-8 text-center">
-            This site&apos;s not just a portfolio — it&apos;s a whole vibe.
-          </p>
+          <SlideShow images={["/assets/certificates-dicoding/5.png"]} />
         </div>
       );
     },
   },
-  { // 04. Smart parking assitant
-    id: "smartparkingassitant",
-    category: "IoT",
-    title: "Smart Parking Assistant",
-    src: "/assets/projects-screenshots/smartparkingassitant/01.jpeg",
+  {
+    // 04. Smart parking assitant
+    id: "smartbotautocommit",
+    category: "Artificial Intelligence",
+    title: "Smart Auto Commit Assistant",
+    src: "/assets/certificates-dicoding/6.png",
     screenshots: ["01.jpeg", "03.png"],
-    live: "https://github.com/Abhiz2411/smart-parking-assistant",
-    github:"https://github.com/Abhiz2411/smart-parking-assistant",
+    live: "",
+    github: "https://github.com/RaiStillLearning/auto-commit-bot",
     skills: {
-      frontend: [PROJECT_SKILLS.python],
-      backend: [PROJECT_SKILLS.cplusplus, PROJECT_SKILLS.arduino],
+      frontend: [],
+      backend: [PROJECT_SKILLS.js, PROJECT_SKILLS.postman],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            Transform parking with the Smart Parking Assistant, an IoT marvel powered by Arduino 
-            and IR sensors to detect and recommend the best spots in real-time. Enjoy a sleek GUI 
-            that visualizes availability and an intelligent system for quick, optimal decisions. 
-            Built to adapt with customizable hardware and Python-powered software for seamless 
-            integration. Say goodbye to parking woes and hello to smarter space utilization!
+            Smart bot for auto commit in github using js mjs file and API
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/smartparkingassitant/01.jpeg`,
-              `${BASE_PATH}/smartparkingassitant/03.png`,
-              `${BASE_PATH}/smartparkingassitant/04.jpg`,
-            ]}
-          />
+          <SlideShow images={["/assets/certificates-dicoding/6.png"]} />
         </div>
       );
     },
   },
-  { // 05. Smart Job Tracker project
+  {
+    // 05. Smart Job Tracker project
     id: "smartjobtracker",
     category: "Full stack",
     title: "Smart Job Tracker",
     src: "/assets/projects-screenshots/smartjobtracker/02.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png","06.png","07.png"],
+    screenshots: [
+      "01.png",
+      "02.png",
+      "03.png",
+      "04.png",
+      "05.png",
+      "06.png",
+      "07.png",
+    ],
     live: "https://job-tracker-application-eight.vercel.app/",
-    github:"https://github.com/Abhiz2411/Job-tracker-application",
+    github: "https://github.com/Abhiz2411/Job-tracker-application",
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
+      frontend: [
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.vite,
+      ],
       backend: [PROJECT_SKILLS.firebase],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            Track your job applications effortlessly with a sleek, dark-themed app that lets you 
-            manage, filter, and visualize your job search. Organize your applications with a 
-            Kanban board, monitor progress through status updates, and store everything securely. 
-            Enjoy seamless access across devices with a responsive design and email reminders for 
-            interviews. A smarter, more intuitive way to stay on top of your job hunt!
+            Track your job applications effortlessly with a sleek, dark-themed
+            app that lets you manage, filter, and visualize your job search.
+            Organize your applications with a Kanban board, monitor progress
+            through status updates, and store everything securely. Enjoy
+            seamless access across devices with a responsive design and email
+            reminders for interviews. A smarter, more intuitive way to stay on
+            top of your job hunt!
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
@@ -1034,27 +960,35 @@ const projects: Project[] = [
       );
     },
   },
-  { // 06. Savinder Puri portfolio project
+  {
+    // 06. Savinder Puri portfolio project
     id: "savinderpurisportfolio",
     category: "Web Development",
     title: "Savinder Puri Portfolio",
     src: "/assets/projects-screenshots/savinderpuriportfolio/01.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png"],
+    screenshots: ["01.png", "02.png", "03.png", "04.png", "05.png"],
     live: "https://savinder-puri.vercel.app/",
-    github:"https://github.com/Abhiz2411/savinder-puri",
+    github: "https://github.com/Abhiz2411/savinder-puri",
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
+      frontend: [
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.vite,
+      ],
       backend: [],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            Step into the digital world of Savinder Puri, the beloved DevOps guru and Spiritual 
-            Alchemist, with this responsive portfolio website. 🌐✨ Explore his inspiring journey, 
-            milestones, and life-changing services blending tech and spirituality. Built with 
-            modern tools like React and TypeScript, it’s a heartfelt tribute to a mentor who 
-            transforms lives. 💻🕊️ Crafted with ❤️ by Abhijit Zende! 🚀
+            Step into the digital world of Savinder Puri, the beloved DevOps
+            guru and Spiritual Alchemist, with this responsive portfolio
+            website. 🌐✨ Explore his inspiring journey, milestones, and
+            life-changing services blending tech and spirituality. Built with
+            modern tools like React and TypeScript, it’s a heartfelt tribute to
+            a mentor who transforms lives. 💻🕊️ Crafted with ❤️ by Abhijit
+            Zende! 🚀
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow

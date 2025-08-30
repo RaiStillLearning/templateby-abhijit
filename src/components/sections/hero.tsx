@@ -38,7 +38,7 @@ const HeroSection = () => {
                       "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
                     )}
                   >
-                    Jelajahi Skill kami di sini yukk
+                    Hi, My Name Is Rakha Arkana
                     <br className="md:hidden" />
                   </p>
                 </BlurIn>
@@ -51,7 +51,7 @@ const HeroSection = () => {
                           "cursor-default text-edge-outline font-display sm:text-7xl md:text-9xl "
                         )}
                       >
-                        Raka Sadik Raffi Affan
+                        Fullstack Developer.
                       </h1>
                     </TooltipTrigger>
                     <TooltipContent
@@ -67,10 +67,14 @@ const HeroSection = () => {
                   <p
                     className={cn(
                       "md:self-start md:mt-4 font-thin text-md text-slate-500 dark:text-zinc-400 ml-3",
-                      "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
+                      "cursor-default font-display sm:text-xl md:text-xl whitespace-pre-line bg-clip-text"
                     )}
                   >
-                    Web Developer From Ghamacaraka
+                    I’m a junior fullstack web developer passionate about
+                    building clean, responsive, and user-friendly applications.
+                    Skilled in React, Node.js, Express.js, and MongoDB (MERN
+                    Stack) — always eager to learn and collaborate on exciting
+                    projects.
                   </p>
                 </BlurIn>
               </div>
