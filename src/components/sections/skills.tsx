@@ -21,7 +21,8 @@ const SkillsSection = () => {
           </BoxReveal>
         </Link>
         <p className="mx-auto mt-4 line-clamp-4 max-w-3xl font-normal text-base text-center text-neutral-300">
-          (hint: press a key )
+          (hint: press a key ) <br />
+          Use your desktop to browse with amazing results
         </p>
       </div>
     </section>
