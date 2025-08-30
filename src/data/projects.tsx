@@ -39,8 +39,9 @@ import {
   SiBootstrap,
   SiApachemaven,
   SiCplusplus,
-  SiArduino,
   SiPostman,
+  SiGithub,
+  SiGit,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import css from "styled-jsx/css";
@@ -298,6 +299,18 @@ const PROJECT_SKILLS = {
     bg: "black",
     fg: "white",
     icon: <SiPostman />,
+  },
+  github: {
+    title: "Github",
+    bg: "black",
+    fg: "white",
+    icon: <SiGithub />,
+  },
+  git: {
+    title: "Git",
+    bg: "black",
+    fg: "white",
+    icon: <SiGit />,
   },
 };
 export type Project = {
@@ -908,98 +921,50 @@ const projects: Project[] = [
   },
   {
     // 05. Smart Job Tracker project
-    id: "smartjobtracker",
-    category: "Full stack",
-    title: "Smart Job Tracker",
-    src: "/assets/projects-screenshots/smartjobtracker/02.png",
-    screenshots: [
-      "01.png",
-      "02.png",
-      "03.png",
-      "04.png",
-      "05.png",
-      "06.png",
-      "07.png",
-    ],
-    live: "https://job-tracker-application-eight.vercel.app/",
-    github: "https://github.com/Abhiz2411/Job-tracker-application",
+    id: "Certificates Git & GitHub - Dicoding",
+    category: "Certificates: Git & GitHub - Dicoding",
+    title: "Certificates: Git & GitHub - Dicoding",
+    src: "/assets/certificates-dicoding/2.png",
+    screenshots: ["02.png"],
+    live: "",
+    github: "https://github.com/RaiStillLearning",
     skills: {
-      frontend: [
-        PROJECT_SKILLS.js,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.vite,
-      ],
-      backend: [PROJECT_SKILLS.firebase],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Track your job applications effortlessly with a sleek, dark-themed
-            app that lets you manage, filter, and visualize your job search.
-            Organize your applications with a Kanban board, monitor progress
-            through status updates, and store everything securely. Enjoy
-            seamless access across devices with a responsive design and email
-            reminders for interviews. A smarter, more intuitive way to stay on
-            top of your job hunt!
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/smartjobtracker/01.png`,
-              `${BASE_PATH}/smartjobtracker/02.png`,
-              `${BASE_PATH}/smartjobtracker/03.png`,
-              `${BASE_PATH}/smartjobtracker/04.png`,
-              `${BASE_PATH}/smartjobtracker/05.png`,
-              `${BASE_PATH}/smartjobtracker/06.png`,
-              `${BASE_PATH}/smartjobtracker/07.png`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  {
-    // 06. Savinder Puri portfolio project
-    id: "savinderpurisportfolio",
-    category: "Web Development",
-    title: "Savinder Puri Portfolio",
-    src: "/assets/projects-screenshots/savinderpuriportfolio/01.png",
-    screenshots: ["01.png", "02.png", "03.png", "04.png", "05.png"],
-    live: "https://savinder-puri.vercel.app/",
-    github: "https://github.com/Abhiz2411/savinder-puri",
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.js,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.vite,
-      ],
+      frontend: [PROJECT_SKILLS.git, PROJECT_SKILLS.github],
       backend: [],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            Step into the digital world of Savinder Puri, the beloved DevOps
-            guru and Spiritual Alchemist, with this responsive portfolio
-            website. 🌐✨ Explore his inspiring journey, milestones, and
-            life-changing services blending tech and spirituality. Built with
-            modern tools like React and TypeScript, it’s a heartfelt tribute to
-            a mentor who transforms lives. 💻🕊️ Crafted with ❤️ by Abhijit
-            Zende! 🚀
+            learn git and github from dicoding and get the certificate
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/savinderpuriportfolio/01.png`,
-              `${BASE_PATH}/savinderpuriportfolio/02.png`,
-              `${BASE_PATH}/savinderpuriportfolio/03.png`,
-              `${BASE_PATH}/savinderpuriportfolio/04.png`,
-              `${BASE_PATH}/savinderpuriportfolio/05.png`,
-            ]}
-          />
+          <SlideShow images={["/assets/certificates-dicoding/2.png"]} />
+        </div>
+      );
+    },
+  },
+  {
+    // 06. Savinder Puri portfolio project
+    id: "Certificates Basic Programming - Dicoding",
+    category: "Web Development",
+    title: "Certificates: Basic Programming - Dicoding",
+    src: "/assets/certificates-dicoding/4.png",
+    screenshots: ["04.png"],
+    live: "",
+    github: "https://github.com/RaiStillLearning",
+    skills: {
+      frontend: [PROJECT_SKILLS.js],
+      backend: [],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            basic programming from dicoding and get the certificate
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow images={["/assets/certificates-dicoding/4.png"]} />
         </div>
       );
     },

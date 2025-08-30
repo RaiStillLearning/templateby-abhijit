@@ -22,9 +22,7 @@ function Footer() {
               className="text-xs underline-offset-4 hover:underline"
               href={href}
               key={`l_${index}`}
-            >
-              <Button variant={"link"}>{title}</Button>
-            </Link>
+            ></Link>
           );
         })}
       </nav>
