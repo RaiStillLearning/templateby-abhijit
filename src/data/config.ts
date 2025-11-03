@@ -1,5 +1,5 @@
 const config = {
-  title: "Uprak Sekolah",
+  title: "Rakha Arkana Portfolio",
   description: {
     long: "Explore the portfolio of Raka Arkana,",
     short: "Discover the portfolio of Raka Arkana,",
